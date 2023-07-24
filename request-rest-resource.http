@@ -1,23 +1,41 @@
-@server = https://evalm07-glowing-carnival-5wppgjx777qf46x9-8080.preview.app.github.dev
+#@server = https://evalm07-glowing-carnival-5wppgjx777qf46x9-8080.preview.app.github.dev
+@server = https://evalaricoec3.onrender.com
 
-######## Categorias: ########
+############## Categorias: ##############
 
 GET {{server}}/categorias
-###
+#########
 POST {{server}}/categorias
 Content-Type: application/json
 
 {"nombre": "Instrumentos de Cuerda"}
 
-######## Instrumentos: ########
-###
-GET {{server}}/instrumentos
-###
-POST {{server}}/instrumentos
+#########
+POST {{server}}/categorias
 Content-Type: application/json
 
-{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
-###
+{"nombre": "Instrumentos de Viento"}
+
+############## Instrumentos: ##############
+
+GET {{server}}/instrumentos
+
+#########
+POST {{server}}/instrumentos
+Content-Type: application/json
+{"nombre": "Guitarra", "categoria": "http://localhost/categorias/1"}
+
+#########
+POST {{server}}/instrumentos
+Content-Type: application/json
+{"nombre": "Violin", "categoria": "http://localhost/categorias/1"}
+
+#########
+POST {{server}}/instrumentos
+Content-Type: application/json
+{"nombre": "Flauta", "categoria": "http://localhost/categorias/2"}
+
+#########
 GET {{server}}/instrumentos/1/categoria
 ###
 GET {{server}}/instrumentos?sort=nombre.desc
