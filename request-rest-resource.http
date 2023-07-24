@@ -1,0 +1,23 @@
+@server = https://evalm07-glowing-carnival-5wppgjx777qf46x9-8080.preview.app.github.dev
+
+######## Categorias: ########
+
+GET {{server}}/categorias
+###
+POST {{server}}/categorias
+Content-Type: application/json
+
+{"nombre": "Instrumentos de Cuerda"}
+
+######## Instrumentos: ########
+###
+GET {{server}}/instrumentos
+###
+POST {{server}}/instrumentos
+Content-Type: application/json
+
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
+###
+GET {{server}}/instrumentos/1/categoria
+###
+GET {{server}}/instrumentos?sort=nombre.desc
